@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle state) {
-        super.onCreate(state);
+        super.onCreate(state); // boa noite
         setContentView(R.layout.activity_main);
 
         table = new OpenBd(this);
