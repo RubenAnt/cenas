@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle state) {
-        super.onCreate(state);
+        super.onCreate(state); // boa noite
         setContentView(R.layout.activity_main);
         final EditText oED2 = (EditText) findViewById(R.id.Task_Name); //  declaraçao de variavel de Armazenamento de string Task_name introduzida
         final EditText oED3 = (EditText) findViewById(R.id.Task_Description); // declaraçao de variavel de Armazenamento de string Task_description introduzida
