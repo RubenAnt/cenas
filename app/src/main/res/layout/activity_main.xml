@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#D3D3D3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="Task Name"
-                android:textColorHint="#bbb" />
+                android:textColorHint="#000000" />
 
             <EditText
                 android:id="@+id/Task_Description"
@@ -37,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="Task Description"
-                android:textColorHint="#bbb" />
+                android:textColorHint="#000000" />
 
             <EditText
                 android:id="@+id/Task_Date"
@@ -45,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="Date"
-                android:textColorHint="#bbb" />
+                android:textColorHint="#000000" />
 
             <Button
                 android:id="@+id/INSERT"
@@ -53,7 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onINSERTclick"
-                android:text="INSERT" />
+                android:text="INSERT"
+                android:visibility="visible" />
 
         </LinearLayout>
 
@@ -68,11 +70,59 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/text2"
+                    android:id="@+id/text3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pending Tasks"
+                    android:text="Priority"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/High"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="High" />
+
+                    <RadioButton
+                        android:id="@+id/Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Medium" />
+
+                    <RadioButton
+                        android:id="@+id/Low"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Low" />
+
+                </RadioGroup>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pending Tasks"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+                    </LinearLayout>
+                </ScrollView>
 
                 <ScrollView
                     android:layout_width="match_parent"

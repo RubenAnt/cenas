@@ -13,7 +13,8 @@ public class OpenBd extends SQLiteOpenHelper {
     protected static final String COL2 = "Task_Name"; /* 2ª campo da tabela */
     protected static final String COL3 = "Task_Description"; /* 3ª campo da tabela */
     protected static final String COL4 = "Task_Date"; /* 4ª campo da tabela */
-    private static final String CREATE_TASK = "CREATE TABLE " + TABLE_NAME + "(" + COL1 + " INTEGER PRIMARY KEY AUTOINCREMENT," + COL2 + " VARCHAR(50)," + COL3 + " VARCHAR(200)," + COL4 + " VARCHAR(50))";
+    protected static final String COL5 = "Priority"; /* 5ª campo da tabela */
+    private static final String CREATE_TASK = "CREATE TABLE " + TABLE_NAME + "(" + COL1 + " INTEGER PRIMARY KEY AUTOINCREMENT," + COL2 + " VARCHAR(50)," + COL3 + " VARCHAR(200)," + COL4 + " VARCHAR(50)," + COL5 + " VARCHAR(50))";
     /* Criaçâo da tabela */
 
     public OpenBd (Context context) {
@@ -31,4 +32,3 @@ public class OpenBd extends SQLiteOpenHelper {
         db.execSQL(CREATE_TASK);
     }   /* Manipulaçâo da base de dados */
 }
-
